@@ -32,7 +32,11 @@
                   <td>{{ student.city }}</td>
                   <td>{{ student.addr }}</td>
                   <td>{{ student.pin }}</td>
-                  <td><form action="{{ url_for('delete') }} "><button>delete</button></td>
+                  <td>
+                      <form action="{{ url_for('delete')}}" method="delete">
+                          <button type="submit">delete</button>
+                      </form>
+                  </td>
                </tr>
             {% endfor %}
          </tbody>
