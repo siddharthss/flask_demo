@@ -4,8 +4,7 @@
    <body>
       
       <h3>
-         <a href = "{{ url_for('show_all') }}">Comments - Flask 
-            SQLAlchemy example</a>
+         <a href = "{{ url_for('show_all') }}">View all Students</a>
       </h3>
       
       <hr/>
@@ -33,7 +32,7 @@
                   <td>{{ student.city }}</td>
                   <td>{{ student.addr }}</td>
                   <td>{{ student.pin }}</td>
-                  <td><button></button></td>
+                  <td><form action="{{ url_for('delete') }} "><button>delete</button></td>
                </tr>
             {% endfor %}
          </tbody>

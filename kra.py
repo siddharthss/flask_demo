@@ -2,7 +2,9 @@ from flask import Flask, request, flash, url_for, redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://rushi:rushi@localhost/kra'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://flask_demo:password@localhost/flask_demo'
+
+
 app.config['SECRET_KEY'] = "random string"
 db = SQLAlchemy(app)
 
